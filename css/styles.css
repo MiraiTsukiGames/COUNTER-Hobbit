@@ -24,13 +24,17 @@ margin-top: 350px;
 /*h1 styling*/
 h1 {
     font-size: 48px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
+/*informazioni styling*/
+.informazioni {
+    font-size: 18px;
+}
 /* paragraph styling*/
 p {
-    font-size: 24px;
-    margin-bottom: 30px;
+    font-size: 35px;
+    margin-bottom: 20px;
 }
 /* button styling*/
 button {
@@ -52,5 +56,12 @@ button {
 
 /*decrement styling*/
 #decrement {
+    background-color: #00f55e;
+}
+
+/*reset styling*/
+#reset {
+    
     background-color: #f44336;
+    margin-top: 20px;
 }

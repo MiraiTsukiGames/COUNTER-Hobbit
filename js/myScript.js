@@ -15,3 +15,8 @@ function decrement() {
 
 }
 
+//reset function
+function reset() {
+    counter = 0;
+    document.getElementById("counter").innerHTML = counter;
+}
