@@ -2,30 +2,29 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Counter App</title>
-    <link rel="stylesheet" href="CSS/styles.css">
-    <script src="Js/myScript.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/counterscript.js"></script>
 </head>
 <body>
     <!--Container-->
     <div class="container">
     <!--App Title-->
-   <h1>Counter App</h1>
-   <!--paragrafo informazioni-->
-   <p class="informazioni">Clicca + per aumentare il valore o - per diminuirlo</p>
+   <h1>Counter</h1>
    <!---Counter-->
-   <p>Counter: <span id="counter">0</span></p>
-   <div>
+   <h2 id="count">0</h2>
+   <div class="btn">
      <!--button increment-->
-   <button id="increment" onclick="increment()">+</button>
+   <button class="increment" onclick="increment()">+</button>
+    <!--button reset-->
+    <button class="reset" onclick="resetValue()">Reset</button>
     <!--button decrement-->
-   <button id="decrement" onclick="decrement()">-</button>
+   <button class="decrement" onclick="decrement()">-</button>
+  </div>
 </div>
-<!--button reset-->
-<div>
-   <button id="reset" onclick="reset()">Reset</button>
-</div>
-</div>
+
 
 </body>
 </html>
