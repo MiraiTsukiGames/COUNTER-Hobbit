@@ -4,27 +4,29 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Counter App</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="js/counterscript.js"></script>
+    <title>Hobbit Counter</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/counterscript.js"></script>
 </head>
 <body>
     <!--Container-->
     <div class="container">
-    <!--App Title-->
-   <h1>Counter</h1>
-   <!---Counter-->
-   <h2 id="count">0</h2>
-   <div class="btn">
-     <!--button increment-->
-   <button class="increment" onclick="increment()">+</button>
-    <!--button reset-->
-    <button class="reset" onclick="resetValue()">Reset</button>
-    <!--button decrement-->
-   <button class="decrement" onclick="decrement()">-</button>
-  </div>
+   <h1 class="textGradient">Counter</h1>
+   <h2 class="textGradient">Inspired by The Hobbit</h2>
+   <span id="count" class="textGradient">0</span>
+   <div id="buttons-container">
+    <button onclick = "decrement()">-</button>
+    <button class="disabledButton" onclick= "resetValue()">Reset</button>
+    <button onclick = "increment()">+</button>
 </div>
-
-
+   <audio id="backgroundmusic" controls="controls">
+    <source src="assets/sounds/Hobbitbackgroundmusic.wav" type="audio/wav">
+    </audio>
+</div>
+<footer>
+  <div >
+      <span class="footer_text" _msttexthash="907023" _msthash="11">Copyright @ 2023 Samanta Mancini</span>
+  </div>
+</footer>
 </body>
 </html>
