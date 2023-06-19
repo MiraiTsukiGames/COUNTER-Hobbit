@@ -1,7 +1,7 @@
 // variables 
 
 let count = 0;
-var sound = url("https://miraitsukigames.github.io/Hobbit-Counter/assets/sounds/click.m4a");
+var sound = new Audio url("https://miraitsukigames.github.io/Hobbit-Counter/assets/sounds/click.m4a");
 function increment() {
 sound.play();
 count++;
