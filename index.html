@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hobbit Counter</title>
     <link rel="stylesheet" href="assets/css/styles.css">
-    <script src="assets/js/counterscript.js"></script>
+    <script defer src="assets/js/counterscript.js"></script>
+    <script defer src="assets/js/animations.js"></script>
 </head>
 <body>
     <!--Container-->
@@ -15,9 +16,9 @@
    <h2 class="textGradient">Inspired by The Hobbit</h2>
    <span id="count" class="textGradient">0</span>
    <div id="buttons-container">
-    <button onclick = "decrement()">-</button>
-    <button class="disabledButton" onclick= "resetValue()">Reset</button>
-    <button onclick = "increment()">+</button>
+    <input type="button" id="decrement" value="-">
+    <input type="button" id="reset" value="0">
+    <input type="button" id="increment" value="+">
 </div>
    <audio id="backgroundmusic" controls="controls">
     <source src="assets/sounds/Hobbitbackgroundmusic.wav" type="audio/wav">
@@ -25,8 +26,11 @@
 </div>
 <footer>
   <div >
-      <span class="footer_text" _msttexthash="907023" _msthash="11">Copyright @ 2023 Samanta Mancini</span>
+      <p class="footer_text">Copyright @ 2023 Samanta Mancini</p>
   </div>
 </footer>
 </body>
+<script>
+    
+</script>
 </html>

@@ -10,7 +10,7 @@
 body {
     padding: 0;
     margin: 0;
-    background-image: linear-gradient(rgba(107,107, 107, 0.5), rgba(0, 0, 0, 0.8)), url('../img/backgroundimage.jpg');
+    background-image: url('../img/backgroundimage.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
@@ -46,16 +46,16 @@ h2 {
 }
 
 #count {
-    font-size: 90px;
+    font-size: 100px;
 }
 #buttons-container {
     display: inline-block;
     margin: 0 60px;
 }
 
-button {
+input {
     padding: 20px 30px;
-    font-size: 20px;
+    font-size: 30px;
 }
 audio {
     position: absolute;
