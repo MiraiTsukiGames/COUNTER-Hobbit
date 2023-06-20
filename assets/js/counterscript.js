@@ -1,30 +1,53 @@
 // variables 
-    const audioElement = new Audio("assets/sounds/click.wav");
+    const audio = new Audio("assets/sounds/click.wav");
     let count = 0;
     const decrement = document.getElementById('decrement');
     const increment = document.getElementById('increment');
     const reset = document.getElementById('reset');
     let counter = document.getElementById('count');
 
-
-    //function decrement
+    //Reset disabled
+     reset.disabled = true;
     
-    decrement.onclick = function(){
-    audioElement.play();
-    count--;
-    counter.innerHTML = count;
+     //Event buttons
+     decrement.addEventListener('click', decrementValue);
+     reset.addEventListener('click', resetCount);
+     increment.addEventListener('click', incrementValue);
+
+     //function decrement
+     function decrementValue(){
+      audio.play();
+      count--;
+      counter.innerHTML = count;
+
+      //Condition reset 
+      if (count !== 0) {
+        reset.disabled = false;
+      } else {
+        reset.disabled = true;
+      }
     }
     
-
-    reset.onclick = function(){
-      audioElement.play();
+    //function reset
+    function resetCount(){
+      audio.play();
       count = 0;
       counter.innerHTML = count;
-      }
-
-     //function increment
-   increment.onclick = function(){
-      audioElement.play();
+      reset.disabled = true;
+    }
+    
+    //function increment
+    function incrementValue(){
+      audio.play();
       count++;
       counter.innerHTML = count;
+
+      //Condition reset 
+      if (count !== 0) {
+        reset.disabled = false;
+      } else {
+        reset.disabled = true;
       }
+    }
+   
+     

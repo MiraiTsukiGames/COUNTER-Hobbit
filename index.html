@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hobbit Counter</title>
     <link rel="stylesheet" href="assets/css/styles.css">
-    <script defer src="assets/js/counterscript.js"></script>
-    <script defer src="assets/js/animations.js"></script>
+    <script src="assets/js/counterscript.js" defer></script>
+    <script src="assets/js/animations.js" defer></script>
 </head>
 <body>
     <!--Container-->
@@ -16,9 +16,9 @@
    <h2 class="textGradient">Inspired by The Hobbit</h2>
    <span id="count" class="textGradient">0</span>
    <div id="buttons-container">
-    <input type="button" id="decrement" value="-">
-    <input type="button" id="reset" value="0">
-    <input type="button" id="increment" value="+">
+    <button id="decrement">-</button>
+    <button id="reset">0</button>
+    <button id="increment">+</button>
 </div>
    <audio id="backgroundmusic" controls="controls">
     <source src="assets/sounds/Hobbitbackgroundmusic.wav" type="audio/wav">
