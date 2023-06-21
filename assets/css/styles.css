@@ -10,7 +10,7 @@
 body {
     padding: 0;
     margin: 0;
-    background-image: url('../img/backgroundimage.jpg');
+    background-image: linear-gradient(rgba(107, 107, 107, 0.5), rgba(0, 0, 0, 0.8)), url('../img/backgroundimage.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
@@ -56,7 +56,32 @@ h2 {
 button {
     padding: 20px 30px;
     font-size: 30px;
+    border: none;
+    color: white;
 }
+
+button:hover {
+    box-shadow: 0 0 50px #fd9b09;
+    color: #fd9b09;
+}
+
+#decrement {
+    background-image: url('../img/anello-.png');
+    background-size: cover;
+    background-position: center;
+}
+
+#increment {
+    background-image: url('../img/anello+.png');
+    background-size: cover;
+    background-position: center;
+}
+
+#reset {
+    background-image: url('../img/gandalf.png');
+    color: #352400;
+}
+
 audio {
     position: absolute;
     bottom: -60%;

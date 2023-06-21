@@ -1,5 +1,5 @@
 // variables 
-    const audio = new Audio("assets/sounds/click.wav");
+    const audio = new Audio("assets/sounds/click.m4a");
     let count = 0;
     const decrement = document.getElementById('decrement');
     const increment = document.getElementById('increment');
@@ -20,7 +20,7 @@
       count--;
       counter.innerHTML = count;
 
-      //Condition reset 
+      //Condition reset button 
       if (count !== 0) {
         reset.disabled = false;
       } else {
@@ -42,7 +42,7 @@
       count++;
       counter.innerHTML = count;
 
-      //Condition reset 
+      //Condition reset button
       if (count !== 0) {
         reset.disabled = false;
       } else {
