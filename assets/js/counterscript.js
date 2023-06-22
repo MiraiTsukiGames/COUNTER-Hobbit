@@ -6,48 +6,51 @@
     const reset = document.getElementById('reset');
     let counter = document.getElementById('count');
 
-    //Reset disabled
-     reset.disabled = true;
-    
-     //Event buttons
-     decrement.addEventListener('click', decrementValue);
-     reset.addEventListener('click', resetCount);
-     increment.addEventListener('click', incrementValue);
 
-     //function decrement
-     function decrementValue(){
+    //Event buttons
+    increment.addEventListener('click', incrementValue);
+     reset.addEventListener('click', resetCount);
+     decrement.addEventListener('click', decrementValue);
+
+
+     //function increment
+     function incrementValue(){
+
       audio.play();
-      count--;
+      count++;
       counter.innerHTML = count;
 
-      //Condition reset button 
-      if (count !== 0) {
-        reset.disabled = false;
-      } else {
-        reset.disabled = true;
-      }
-    }
+      reset.disabled = false;
+
+}
     
     //function reset
     function resetCount(){
+
       audio.play();
       count = 0;
       counter.innerHTML = count;
+
       reset.disabled = true;
-    }
+
+}
     
-    //function increment
-    function incrementValue(){
+    //function decrement
+    function decrementValue(){
+
       audio.play();
-      count++;
+      count--;
       counter.innerHTML = count;
 
       //Condition reset button
       if (count !== 0) {
         reset.disabled = false;
+
       } else {
         reset.disabled = true;
+
       }
-    }
+
+}
    
      
