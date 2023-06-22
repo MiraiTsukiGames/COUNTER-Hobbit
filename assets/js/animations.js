@@ -31,12 +31,12 @@ function Timer(){
 
                 i = image_array.length;
                 j = 0;
-                
+
             }
 
         }
 
-        , 3000
+        , 5000
     );
 }
 
