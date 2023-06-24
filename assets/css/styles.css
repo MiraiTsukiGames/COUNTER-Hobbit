@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     transition: .3s;
+    cursor: url('../img/staff.png'), auto;
 }
 
 /* Body styling*/
@@ -37,6 +38,7 @@ body {
 h1 {
     font-size: 80px;
     margin-bottom: 10px;
+    
 }
 
 /* h2 styling*/
@@ -111,7 +113,7 @@ audio {
 
 @supports (-webkit-background-clip: text) {
     .textGradient {
-        background-image: linear-gradient(60deg, #352400, #fd9b09);
+        background-image: linear-gradient(60deg, #bd8204, #b96d01);
         -webkit-background-clip: text;
         color: transparent;
         background-clip: clip;

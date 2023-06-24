@@ -6,7 +6,6 @@ const image_array = [
     "assets/img/backgroundimage4.jpg"
 ];
 
-
 //Body style
  document.body.style.backgroundImage = "url("+image_array[0]+")";
  
