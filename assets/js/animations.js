@@ -17,12 +17,10 @@ function Timer(){
     let j = 0;
     let delay = 500;
 
-
         function processChunk(){
 
             if (i > 0) {
-
-                document.body.style.backgroundImage = "url("+image_array[j]+")";
+            document.body.style.backgroundImage = "url("+image_array[j]+")";
 
                 i--;
                 j++;
