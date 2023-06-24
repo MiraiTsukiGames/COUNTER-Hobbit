@@ -1,17 +1,17 @@
 //Array images
-const image_array = new Array (
+const image_array = [
     "assets/img/backgroundimage.jpg", 
     "assets/img/backgroundimage2.jpg",
     "assets/img/backgroundimage3.jpg",
     "assets/img/backgroundimage4.jpg"
-);
+];
 
 //Body style
  document.body.style.backgroundImage = "url("+image_array[0]+")";
 
 
  //Function timer
-window.onload = function Timer(){
+window.onload = function() {
 
     let i = image_array.length;
     let j = 0;
