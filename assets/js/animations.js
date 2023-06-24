@@ -15,7 +15,7 @@ function Timer(){
 
     let i = image_array.length;
     let j = 0;
-    let delay = 500;
+    let delay = 5000;
 
         function processChunk(){
 
