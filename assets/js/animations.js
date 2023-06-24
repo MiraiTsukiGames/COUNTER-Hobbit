@@ -6,10 +6,13 @@ const image_array = [
     "assets/img/backgroundimage4.jpg"
 ];
 
+
+
+
+
 //Body style
  document.body.style.backgroundImage = "url("+image_array[0]+")";
-
-
+ 
  //Function timer
 window.onload = function() {
 
@@ -21,6 +24,7 @@ window.onload = function() {
 
             if (i > 0) {
             document.body.style.backgroundImage = "url("+image_array[j]+")";
+           
 
                 i--;
                 j++;
