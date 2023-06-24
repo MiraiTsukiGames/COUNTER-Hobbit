@@ -13,12 +13,12 @@ const image_array = new Array (
  //Function timer
 function Timer(){
 
-    var i = image_array.length;
-    var j = 0;
+    let i = image_array.length;
+    let j = 0;
+    let delay = 500;
 
-    setInterval(
 
-        function(){
+        function processChunk(){
 
             if (i > 0) {
 
@@ -33,11 +33,11 @@ function Timer(){
                 j = 0;
 
             }
-
+            
+            setTimeout(processChunk, delay);
         }
 
-        , 5000
-    );
+        setTimeout(processChunk, 0);
 }
 
 Timer();
