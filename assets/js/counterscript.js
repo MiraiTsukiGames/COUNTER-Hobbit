@@ -15,29 +15,28 @@
 
      //function increment
      function incrementValue(){
-
       audio.play();
       count++;
       counter.innerHTML = count;
-
+      
+      //reset button
       reset.disabled = false;
 
 }
     
     //function reset
     function resetCount(){
-
       audio.play();
       count = 0;
       counter.innerHTML = count;
 
+      //reset button
       reset.disabled = true;
 
 }
     
     //function decrement
     function decrementValue(){
-
       audio.play();
       count--;
       counter.innerHTML = count;
