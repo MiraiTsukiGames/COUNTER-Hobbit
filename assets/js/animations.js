@@ -22,7 +22,6 @@ window.onload = function() {
             if (i > 0) {
             document.body.style.backgroundImage = "url("+image_array[j]+")";
            
-
                 i--;
                 j++;
 
