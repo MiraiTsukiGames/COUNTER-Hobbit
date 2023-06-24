@@ -11,7 +11,7 @@ const image_array = new Array (
 
 
  //Function timer
-function Timer(){
+window.onload = function Timer(){
 
     let i = image_array.length;
     let j = 0;
@@ -38,5 +38,7 @@ function Timer(){
         setTimeout(processChunk, 0);
 }
 
-Timer();
+
+
+
 
