@@ -6,12 +6,12 @@ const image_array = [
     "assets/img/backgroundimage4.jpg"
 ];
 
-//Body style
- document.body.style.backgroundImage = "url("+image_array[0]+")";
- 
- //Function timer
-window.onload = function() {
 
+document.body.style.backgroundImage = "url("+image_array[0]+")";
+
+ 
+function ChangeBG() {
+    
     let i = image_array.length;
     let j = 0;
     let delay = 5000;
@@ -31,7 +31,7 @@ window.onload = function() {
 
             }
             
-            setTimeout(processChunk, delay);
+         setTimeout(processChunk, delay);
         }
 
         setTimeout(processChunk, 0);
@@ -39,5 +39,20 @@ window.onload = function() {
 
 
 
+//Media Query
 
+function onMediaQueryChanges() {
+    if (myMediaQuery.matches) { // If media query matches
+        document.body.style.backgroundImage = "url('assets/img/imageMobile.jpg')";
+        clearTimeout();
+    } else {
+        ChangeBG();
+    }
+  }
+  
+  let myMediaQuery = window.matchMedia('(max-width: 930px) and (orientation: portrait)');
+  onMediaQueryChanges(myMediaQuery) // Call listener function at run time
+  myMediaQuery.addListener(onMediaQueryChanges) // Attach listener function on state changes
+
+  onMediaQueryChanges();
 

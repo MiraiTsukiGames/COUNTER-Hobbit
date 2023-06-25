@@ -14,7 +14,7 @@
 
 
      //function increment
-     function incrementValue(){
+     function incrementValue() {
       audio.play();
       count++;
       counter.innerHTML = count;
@@ -25,7 +25,7 @@
 }
     
     //function reset
-    function resetCount(){
+    function resetCount() {
       audio.play();
       count = 0;
       counter.innerHTML = count;
@@ -36,7 +36,7 @@
 }
     
     //function decrement
-    function decrementValue(){
+    function decrementValue() {
       audio.play();
       count--;
       counter.innerHTML = count;
