@@ -7,7 +7,9 @@ const image_array = [
 ];
 
 
+
 document.body.style.backgroundImage = "url("+image_array[0]+")";
+
 
  
 function ChangeBG() {
@@ -15,6 +17,7 @@ function ChangeBG() {
     let i = image_array.length;
     let j = 0;
     let delay = 5000;
+    
 
         function processChunk(){
 
@@ -33,26 +36,15 @@ function ChangeBG() {
             
          setTimeout(processChunk, delay);
         }
-
-        setTimeout(processChunk, 0);
+        
+         setTimeout(processChunk, 0);
 }
 
+ChangeBG();
 
 
-//Media Query
 
-function onMediaQueryChanges() {
-    if (myMediaQuery.matches) { // If media query matches
-        document.body.style.backgroundImage = "url('assets/img/imageMobile.jpg')";
-        clearTimeout();
-    } else {
-        ChangeBG();
-    }
-  }
   
-  let myMediaQuery = window.matchMedia('(max-width: 930px) and (orientation: portrait)');
-  onMediaQueryChanges(myMediaQuery) // Call listener function at run time
-  myMediaQuery.addListener(onMediaQueryChanges) // Attach listener function on state changes
 
-  onMediaQueryChanges();
+  
 
