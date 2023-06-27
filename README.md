@@ -1,1 +1,3 @@
-# Progetto-JavaScript-Basics-di-Samanta_Mancini
+# Hobbit Counter
+
+## link https://hobbitcounter.netlify.app/
