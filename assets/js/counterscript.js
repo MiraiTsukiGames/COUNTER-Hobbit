@@ -5,7 +5,7 @@
     const increment = document.getElementById('increment');
     const reset = document.getElementById('reset');
     let counter = document.getElementById('count');
-
+    
 
     //Event buttons
     increment.addEventListener('click', incrementValue);
@@ -40,14 +40,11 @@
       audio.play();
       count--;
       counter.innerHTML = count;
-
       //Condition reset button
       if (count !== 0) {
         reset.disabled = false;
-
       } else {
         reset.disabled = true;
-
       }
 
 }

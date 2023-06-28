@@ -63,6 +63,7 @@ button {
     font-size: 30px;
     border: none;
     color: white;
+    border-radius: 10px;
 }
 
 button:hover {
@@ -102,7 +103,12 @@ button:hover {
 audio {
     position: absolute;
     bottom: -60%;
+    width: 300px; 
+    height: 32px;
 }
+
+
+
 @font-face {
     font-family: "Hobbit Font";
     src: url(../font-family/ringbearer.medium.ttf) format("truetype");
@@ -118,7 +124,7 @@ audio {
 
 @supports (-webkit-background-clip: text) {
     .textGradient {
-        background-image: linear-gradient(60deg, #bd8204, #b96d01);
+        background-image: linear-gradient(60deg, #ffc74e, #b96d01);
         -webkit-background-clip: text;
         color: transparent;
         background-clip: clip;
