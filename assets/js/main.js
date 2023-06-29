@@ -109,6 +109,7 @@ function ChangeBG() {
    timeValue = setTimeout(processChunk, 0);
 }
 
+//call the function
 ChangeBG();
 //funzione stop timer
 function stoptimer() {
