@@ -40,6 +40,7 @@ function stoptimer() {
 }
 
 
+
 //media query
 function Mediaquery(mq) {
     //Condizione per il media query
