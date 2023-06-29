@@ -102,11 +102,11 @@
        }
     
        .footer_text {
-        font-size: 15px;
+        font-size: 10px;
         color: #FFFF;
         position: absolute;
         bottom: 0;
-        left: 20px;
+        
     }
 
     .container {
@@ -115,11 +115,15 @@
        }
     
        audio {
-        bottom: 20px;
+        bottom: 60px;
     }
 
     #count {
     font-size: 50px;
+}
+
+    button {
+    font-size: 15px;
 }
 
 }
