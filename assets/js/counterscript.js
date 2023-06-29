@@ -19,9 +19,12 @@
       count++;
       counter.innerHTML = count;
       
-      //reset button
-      reset.disabled = false;
-
+      //Condition reset button
+      if (count !== 0) {
+        reset.disabled = false;
+      } else {
+        reset.disabled = true;
+      }
 }
     
     //function reset
