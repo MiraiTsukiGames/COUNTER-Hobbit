@@ -21,8 +21,9 @@
     text-align: center;
    }
 
-   #buttons-container {
+   #buttons {
     width: 80%;
+    margin-top: 50px;
    }
 
    
@@ -49,6 +50,11 @@
         overflow-x: hidden;
         background-image: url('../img/backgroundimage3.jpg');
     }
+
+    #buttons {
+        width: 80%;
+        margin-top: 10px;
+       }
 }
 
 /*Tablet*/
@@ -67,6 +73,11 @@
     audio {
         bottom: -80px;
     }
+
+    #buttons {
+        width: 50%;
+        margin-top: 50px;
+       }
     .footer_text {
         font-size: 15px;
         color: #FFFF;
@@ -96,9 +107,9 @@
         font-size: 25px;
     }
 
-    #buttons-container {
-        width: 80%;
-        margin-top: 0;
+    #buttons {
+        width: 50%;
+        margin-top: 10px;
        }
     
        .footer_text {
@@ -123,7 +134,8 @@
 }
 
     button {
-    font-size: 15px;
+    font-size: 12px;
+    padding: 10px 15px;
 }
 
 }
