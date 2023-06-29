@@ -33,19 +33,23 @@ function ChangeBG() {
      timeValue = setTimeout(processChunk, 0);
 }
 
-//chiama la funzione
 ChangeBG();
+//funzione stop timer
+function stoptimer() {
+    clearTimeout(timeValue);
+}
+
 
 //media query
 function Mediaquery(mq) {
     //Condizione per il media query
     if (mq.matches) {
-    window.onload = clearTimeout(timeValue);
+    stoptimer();
     } else {
    //chiama la funzione change background
-   window.onload = ChangeBG();
+    ChangeBG();
     }
   }
   //variabile 
-  let mq = window.matchMedia("(max-width: 1280px) and (orientation: portrait)");
+  let mq = window.matchMedia("(max-width: 1280px)");
   Mediaquery(mq); // chiama la funzione media query
