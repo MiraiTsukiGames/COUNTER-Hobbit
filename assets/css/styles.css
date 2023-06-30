@@ -211,7 +211,7 @@ audio {
 
     #buttons {
         width: 50%;
-        margin-top: 50px;
+        margin-top: 10px;
        }
     .footer_text {
         font-size: 15px;
@@ -246,7 +246,7 @@ audio {
        }
     
        audio {
-        bottom: 60px;
+        bottom: -20px;
     }
 
     #count {
@@ -257,6 +257,11 @@ audio {
     font-size: 12px;
     padding: 10px 15px;
 }
+
+    #buttons {
+    width: 30%;
+    margin-top: 0px;
+   }
 
 }
 /*Desktop*/
