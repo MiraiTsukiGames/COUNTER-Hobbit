@@ -196,6 +196,14 @@ audio {
 
 /*Tablet*/
 @media all and (min-width: 481px) and (max-width: 1280px) and (orientation: portrait) {
+    body {
+        width: 100%;
+        height: 100vh;
+        cursor: url('../img/staff.png'), auto;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        background-image: url('../img/imageMobile.jpg');
+    }
    
     audio {
         bottom: -80px;
@@ -215,8 +223,16 @@ audio {
 }
 
 @media all and (min-width: 481px) and (max-width: 1280px) and (orientation: landscape) {
+    body {
+        width: 100%;
+        height: 100vh;
+        cursor: url('../img/staff.png'), auto;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        background-image: url('../img/backgroundimage3.jpg');
+    }
     
-       .footer_text {
+    .footer_text {
         font-size: 10px;
         color: #FFFF;
         position: absolute;
