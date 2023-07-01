@@ -1,8 +1,10 @@
 //create buttons variables
+const el = document.createElement('div');
 const increment = document.createElement('button');
 const reset = document.createElement('button');
 const decrement = document.createElement('button');
-const el = document.createElement('div');
+
+
 
 //set id elements
 el.setAttribute('id','buttons');
@@ -11,7 +13,7 @@ reset.setAttribute('id', 'reset');
 decrement.setAttribute('id', 'decrement');
 
 //append child elements
-document.body.appendChild(el);
+document.getElementById('container-page').appendChild(el);
 el.appendChild(increment);
 el.appendChild(reset);
 el.appendChild(decrement);
@@ -27,12 +29,12 @@ reset.addEventListener('click', resetValue);
 decrement.addEventListener('click', decrementValue);
 
 // variables counter
-    const audio = new Audio("assets/sounds/click.m4a");
-    let count = 0;
-    let counter = document.getElementById('count');
+const audio = new Audio("assets/sounds/click.m4a");
+let count = 0;
+let counter = document.getElementById('count');
     
-    //button reset
-    reset.disabled = true;
+//button reset
+reset.disabled = true;
 
 
      //function increment
