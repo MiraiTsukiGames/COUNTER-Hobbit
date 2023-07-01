@@ -107,6 +107,7 @@ audio {
     bottom: 0;
     width: 300px; 
     height: 25px;
+    width: 80%;
 }
 
 
@@ -161,7 +162,6 @@ audio {
     margin-top: 50px;
    }
 
-   
    .footer_text {
     font-size: 10px;
     position: absolute;
@@ -241,11 +241,6 @@ audio {
 
     #count {
     font-size: 50px;
-}
-
-    button {
-    font-size: 12px;
-    padding: 10px 15px;
 }
 
     #buttons {
