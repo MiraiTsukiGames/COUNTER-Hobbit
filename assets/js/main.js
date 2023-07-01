@@ -113,6 +113,7 @@ function ChangeBG() {
 
 //call the function
 ChangeBG();
+
 //funzione stop timer
 function stoptimer() {
   clearTimeout(timeValue);
