@@ -162,6 +162,10 @@ audio {
     margin-top: 50px;
    }
 
+   audio {
+    width: 60%;
+   }
+
    .footer_text {
     font-size: 10px;
     position: absolute;
@@ -186,6 +190,10 @@ audio {
         width: 80%;
         top: 3%;
        }
+    
+       audio {
+        width: 60%;
+       }
 }
 
 /*Tablet*/
@@ -202,6 +210,10 @@ audio {
 
     #buttons {
         margin-top: 3%;
+       }
+
+       audio {
+        width: 60%;
        }
     .footer_text {
         font-size: 15px;
@@ -247,6 +259,9 @@ audio {
     margin-top: 3%;
    }
 
+   audio {
+    width: 60%;
+   }
 }
 /*Desktop*/
 @media only screen and (min-width: 1281px) {
