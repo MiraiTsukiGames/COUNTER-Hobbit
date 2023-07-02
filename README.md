@@ -27,8 +27,8 @@ Link al progetto:
 
 Screenshot:
 ### *Questa è la modalità con quale si visualizza da desktop:*
-![Questa è la modalità con quale si visualizza da desktop](/assets/img/screenshot1.png)
+![Questa è la modalità con quale si visualizza da desktop](/assets/img/Screenshot.png)
 ### *Questa è la modalità con la quale si visualizza da tablet o smarphone in landscape:*
-![Questa è la modalità con la quale si visualizza da tablet o smarphone in landscape](/assets/img/screenshot2.png)
+![Questa è la modalità con la quale si visualizza da tablet o smarphone in landscape](/assets/img/Screenshot landscape.png)
 ### *Questa è la modalità con la quale si visualizza da smartphone in portrait:*
-![Questa è la modalità con la quale si visualizza da smartphone in portrait](/assets/img/screenshot3.png)
+![Questa è la modalità con la quale si visualizza da smartphone in portrait](/assets/img/screenshotmobile.png)
