@@ -17,12 +17,12 @@ Ho aggiunto una musica di sottofondo in auto-play per i browser che hanno l'impo
 
 Nel processo della creazione di questo progetto, ho incontrato qualche difficoltà inizialmente, che poi ho risolto grazie a consigli sul materiale da studiare. Sono fiero di aver creato qualcosa di originale in totale autonomia, seguendo un'idea precisa data dalla traccia dell'esercizio ma anche lasciandomi guidare da ispirazione e tentativi.
 
-### [Linkedin]([https://www.linkedin.com/in/samantamancini/])
+### [Linkedin](https://www.linkedin.com/in/samantamancini/)
 
 ### [Portfolio](https://miraitsukigames.github.io/)
 
 Link al progetto:
-### [Counter The Hobbit]((https://miraitsukigames.github.io/Counter/)
+### [Counter The Hobbit](https://miraitsukigames.github.io/Counter/)
 
 
 Screenshot:
