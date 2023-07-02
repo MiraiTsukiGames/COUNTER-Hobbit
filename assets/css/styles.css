@@ -7,7 +7,6 @@
     cursor: url('../img/staff.png'), auto;
 }
 
-/* Body styling*/
 body {
     padding: 0;
     margin: 0;
@@ -18,7 +17,6 @@ body {
     font-family: "Hobbit Font", sans-serif;
 }
 
-/*Container styling*/
 .container {
     display: flex;
     flex-direction: column;
@@ -33,14 +31,12 @@ body {
     transform: translate(-50%, -50%);
 }
 
-/*h1 styling*/
 h1 {
     font-size: 80px;
     margin-bottom: 10px;
     
 }
 
-/* h2 styling*/
 h2 {
     font-size: 30px;
     margin-bottom: 20px;
