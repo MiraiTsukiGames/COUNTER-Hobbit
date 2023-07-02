@@ -21,71 +21,48 @@ increment.innerText = '+';
 reset.innerText = '0';
 decrement.innerText = '-';
 
-//Event listener
-increment.addEventListener('click', incrementValue)
-reset.addEventListener('click', resetValue);
-decrement.addEventListener('click', decrementValue);
+//event listener
+el.addEventListener('click', counter);
 
 // variables counter
 const audio = new Audio("assets/sounds/click.m4a");
 let count = 0;
-let counter = document.getElementById('count');
+let display = document.getElementById('count');
 let flash;
 
 
 //button reset
 reset.disabled = true;
 
-//function increment
-function incrementValue(count) {
+//function counter
+function counter(e) {
+  const btn = e.target.id;
   audio.play();
-  count++;
-  
-  //Condition reset button
-    if (count !== 0) {
-        reset.disabled = false;
-    } else {
-        reset.disabled = true;
+  if (btn === 'increment') {
+    count++;
+  } else if (btn === 'decrement') {
+    count--;
+  } else {
+    count = 0;
+    flash = setInterval(flashText, 500);
+    stopFlash();
+    }
+  display.textContent = count;
+
+  if (count != 0) {
+    reset.disabled = false;
+  } else {
+    reset.disabled = true;
   }
-
-}
-    
-    //function reset
-    function resetValue() {
-      audio.play();
-       flash = setInterval(flashText, 500);
-
-       //counter style
-       counter.style.color = "red";
-       count = 0;
-      counter.innerHTML = count;
-
-      //reset, increment, decrement button
-      reset.disabled = true;
-      increment.disabled = true;
-      decrement.disabled = true;
-        stopFlash();
-      
-}
-    
-    //function decrement
-  function decrementValue() {
-      audio.play();
-      count--;
-      counter.innerHTML = count;
-
-   //Condition reset button
-      if (count !== 0) {
-        reset.disabled = false;
-      } else {
-        reset.disabled = true;
-  }
-
+ 
 }
 
 //Flash text function
 function flashText() {
-  counter.style.visibility = (counter.style.visibility == '' ? 'hidden' : '');
+  display.style.visibility = (display.style.visibility == '' ? 'hidden' : '');
+  display.style.color = "red";
+  increment.disabled = true;
+  decrement.disabled = true;
 }
 
 //stopFlash function
@@ -94,16 +71,14 @@ setTimeout(() => {
   clearInterval(flash);
 
   //counter style reset
-  counter.style.color = "";
+  display.style.color = "";
 
   //increment decrement button
   increment.disabled = false;
   decrement.disabled = false;
 }, 10000);
 
-
 }
-
 
 //Array images
 const image_array = [
@@ -113,41 +88,36 @@ const image_array = [
   "assets/img/backgroundimage4.jpg"
 ];
 
+//variables images
+let i = image_array.length;
+let j = 0;
+let delay = 5000;
+let timeValue;
 
 //function change background
 function ChangeBG() {
+timeValue = setInterval(processChunk, delay);
+document.body.style.backgroundImage = "url("+image_array[0]+")";
 
-  //variables
-  let i = image_array.length;
-  let j = 0;
-  let delay = 5000;
-  
-  
       //function process
       function processChunk(){
-        let timeValue;
-          document.body.style.backgroundImage = "url("+image_array[0]+")";
-          if (i > 0) {
+        if (i > 0) {
           document.body.style.backgroundImage = "url("+image_array[j]+")";
               i--;
               j++;
           } else {
               i = image_array.length;
               j = 0;
-              }
-          
-      //timeout
-   timeValue = setTimeout(processChunk, delay);
+           }
       }
-   timeValue = setTimeout(processChunk, 0);
 }
 
-//call the function
-ChangeBG();
 
 //funzione stop timer
 function stoptimer() {
-  clearTimeout(timeValue);
+  setTimeout(()=> {
+    clearInterval(timeValue);
+  });
 }
 
 
@@ -158,7 +128,7 @@ function Mediaquery(mq) {
   //media query condition
   if (mq.matches) {
   
-    //stop timer function
+    //call stop timer function
   stoptimer();
 
   //animation scale title
