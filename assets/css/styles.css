@@ -70,13 +70,13 @@ button:hover {
 }
 
 #decrement {
-    background-image: url('../img/anello-.png');
+    background-image: url('../img/anello+.png');
     background-size: cover;
     background-position: center;
 }
 
 #increment {
-    background-image: url('../img/anello+.png');
+    background-image: url('../img/anello-.png');
     background-size: cover;
     background-position: center;
 }

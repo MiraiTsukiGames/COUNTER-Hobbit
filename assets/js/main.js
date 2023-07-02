@@ -1,20 +1,20 @@
 //create buttons variables
 const el = document.createElement('div');
-const increment = document.createElement('button');
-const reset = document.createElement('button');
 const decrement = document.createElement('button');
+const reset = document.createElement('button');
+const increment = document.createElement('button');
 
 //set id elements
 el.setAttribute('id','buttons');
-increment.setAttribute('id','increment');
+decrement.setAttribute('id','decrement');
 reset.setAttribute('id', 'reset');
-decrement.setAttribute('id', 'decrement');
+increment.setAttribute('id', 'increment');
 
 //append child elements
 document.getElementById('container-page').appendChild(el);
-el.appendChild(increment);
-el.appendChild(reset);
 el.appendChild(decrement);
+el.appendChild(reset);
+el.appendChild(increment);
 
 //button inner text
 increment.innerText = '+';
