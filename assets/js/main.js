@@ -22,7 +22,7 @@ reset.innerText = '0';
 decrement.innerText = '-';
 
 //Event listener
-increment.addEventListener('click', incrementValue);
+increment.addEventListener('click', incrementValue)
 reset.addEventListener('click', resetValue);
 decrement.addEventListener('click', decrementValue);
 
@@ -37,17 +37,17 @@ let flash;
 reset.disabled = true;
 
 //function increment
-function incrementValue() {
+function incrementValue(count) {
   audio.play();
   count++;
-  counter.innerHTML = count;
-
-      //Condition reset button
+  
+  //Condition reset button
     if (count !== 0) {
         reset.disabled = false;
     } else {
         reset.disabled = true;
   }
+
 }
     
     //function reset
