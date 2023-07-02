@@ -91,12 +91,16 @@ button:hover {
     background-position: center;
 }
 
-#reset[disabled]:hover {
+#reset[disabled]:hover, 
+#increment[disabled]:hover,
+#decrement[disabled]:hover {
     box-shadow: none;
     color: white;
 }
 
-#reset[disabled] {
+#reset[disabled], 
+#increment[disabled],
+#decrement[disabled] {
     opacity: 50%;
     cursor: not-allowed;
     pointer-events: none;

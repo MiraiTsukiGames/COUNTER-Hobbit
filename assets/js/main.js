@@ -4,8 +4,6 @@ const increment = document.createElement('button');
 const reset = document.createElement('button');
 const decrement = document.createElement('button');
 
-
-
 //set id elements
 el.setAttribute('id','buttons');
 increment.setAttribute('id','increment');
@@ -32,49 +30,80 @@ decrement.addEventListener('click', decrementValue);
 const audio = new Audio("assets/sounds/click.m4a");
 let count = 0;
 let counter = document.getElementById('count');
-    
+let flash;
+
+
 //button reset
 reset.disabled = true;
 
+//function increment
+function incrementValue() {
+  audio.play();
+  count++;
+  counter.innerHTML = count;
 
-     //function increment
-     function incrementValue() {
-      audio.play();
-      count++;
-      counter.innerHTML = count;
-      
       //Condition reset button
-      if (count !== 0) {
+    if (count !== 0) {
         reset.disabled = false;
-      } else {
+    } else {
         reset.disabled = true;
-      }
+  }
 }
     
     //function reset
     function resetValue() {
       audio.play();
-      count = 0;
+       flash = setInterval(flashText, 500);
+
+       //counter style
+       counter.style.color = "red";
+       count = 0;
       counter.innerHTML = count;
 
-      //reset button
+      //reset, increment, decrement button
       reset.disabled = true;
-
+      increment.disabled = true;
+      decrement.disabled = true;
+        stopFlash();
+      
 }
     
     //function decrement
-    function decrementValue() {
+  function decrementValue() {
       audio.play();
       count--;
       counter.innerHTML = count;
-      //Condition reset button
+
+   //Condition reset button
       if (count !== 0) {
         reset.disabled = false;
       } else {
         reset.disabled = true;
-      }
+  }
 
 }
+
+//Flash text function
+function flashText() {
+  counter.style.visibility = (counter.style.visibility == '' ? 'hidden' : '');
+}
+
+//stopFlash function
+function stopFlash() {
+setTimeout(() => {
+  clearInterval(flash);
+
+  //counter style reset
+  counter.style.color = "";
+
+  //increment decrement button
+  increment.disabled = false;
+  decrement.disabled = false;
+}, 10000);
+
+
+}
+
 
 //Array images
 const image_array = [
@@ -87,6 +116,7 @@ const image_array = [
 
 //function change background
 function ChangeBG() {
+
   //variables
   let i = image_array.length;
   let j = 0;
@@ -95,6 +125,7 @@ function ChangeBG() {
   
       //function process
       function processChunk(){
+        let timeValue;
           document.body.style.backgroundImage = "url("+image_array[0]+")";
           if (i > 0) {
           document.body.style.backgroundImage = "url("+image_array[j]+")";
@@ -106,7 +137,7 @@ function ChangeBG() {
               }
           
       //timeout
-   let timeValue = setTimeout(processChunk, delay);
+   timeValue = setTimeout(processChunk, delay);
       }
    timeValue = setTimeout(processChunk, 0);
 }
@@ -123,15 +154,36 @@ function stoptimer() {
 
 //media query
 function Mediaquery(mq) {
-  //Condizione per il media query
+ 
+  //media query condition
   if (mq.matches) {
+  
+    //stop timer function
   stoptimer();
+
+  //animation scale title
+  document.querySelector(`h1`).animate(
+    [
+      { transform: 'scale(1)' },
+      { transform: 'scale(1.5)' }
+    ],
+    
+    {
+      duration: 1000,
+      iterations: Infinity,
+      direction: 'alternate'
+    }
+  );
+
   } else {
- //chiama la funzione change background
+
+ //Change Background function
   ChangeBG();
   }
 }
-//variabile 
+
+//variables
 let mq = window.matchMedia("(max-width: 1280px)");
-Mediaquery(mq); // chiama la funzione media query
+
+Mediaquery(mq); //Call the media query function
      
