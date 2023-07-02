@@ -29,6 +29,6 @@ Screenshot:
 ### *Questa è la modalità con quale si visualizza da desktop:*
 ![Questa è la modalità con quale si visualizza da desktop](/assets/img/Screenshot.png)
 ### *Questa è la modalità con la quale si visualizza da tablet o smarphone in landscape:*
-![Questa è la modalità con la quale si visualizza da tablet o smarphone in landscape](/assets/img/Screenshot landscape.png)
+![Questa è la modalità con la quale si visualizza da tablet o smarphone in landscape](/assets/img/Screenshotlandscape.png)
 ### *Questa è la modalità con la quale si visualizza da smartphone in portrait:*
 ![Questa è la modalità con la quale si visualizza da smartphone in portrait](/assets/img/screenshotmobile.png)
