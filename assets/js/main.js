@@ -24,7 +24,6 @@ decrementBtn.innerText = '-';
 
 //event listener
 document.addEventListener('click', counter);
-resetBtn.addEventListener('click', stopFlash);
 
 // variables counter
 const audio = new Audio("assets/sounds/click.m4a");
@@ -42,9 +41,10 @@ function counter(e) {
       count++;
     } else if (btn === 'decrement') {
       count--;
-    } else if (btn === 'reset') {
+    } else {
       count = 0;
       flash = setInterval(blinkText, 1000);
+      stopFlash();
     }
     display.textContent = count;
     if (count!= 0) {
