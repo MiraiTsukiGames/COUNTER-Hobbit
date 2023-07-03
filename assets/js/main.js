@@ -1,28 +1,30 @@
-//create buttons variables
+//variables
 const el = document.createElement('div');
-const decrement = document.createElement('button');
-const reset = document.createElement('button');
-const increment = document.createElement('button');
+const decrementBtn = document.createElement('button');
+const resetBtn = document.createElement('button');
+const incrementBtn = document.createElement('button');
+const container = document.getElementById('container-page');
 
 //set id elements
 el.setAttribute('id','buttons');
-decrement.setAttribute('id','decrement');
-reset.setAttribute('id', 'reset');
-increment.setAttribute('id', 'increment');
+decrementBtn.setAttribute('id','decrement');
+resetBtn.setAttribute('id', 'reset');
+incrementBtn.setAttribute('id', 'increment');
 
 //append child elements
-document.getElementById('container-page').appendChild(el);
-el.appendChild(decrement);
-el.appendChild(reset);
-el.appendChild(increment);
+container.appendChild(el);
+el.appendChild(decrementBtn);
+el.appendChild(resetBtn);
+el.appendChild(incrementBtn);
 
 //button inner text
-increment.innerText = '+';
-reset.innerText = '0';
-decrement.innerText = '-';
+incrementBtn.innerText = '+';
+resetBtn.innerText = '0';
+decrementBtn.innerText = '-';
 
 //event listener
-el.addEventListener('click', counter);
+document.addEventListener('click', counter);
+resetBtn.addEventListener('click', stopFlash);
 
 // variables counter
 const audio = new Audio("assets/sounds/click.m4a");
@@ -30,55 +32,49 @@ let count = 0;
 let display = document.getElementById('count');
 let flash;
 
-
 //button reset
-reset.disabled = true;
+resetBtn.disabled = true;
 
 //function counter
 function counter(e) {
-  const btn = e.target.id;
-  audio.play();
-  if (btn === 'increment') {
-    count++;
-  } else if (btn === 'decrement') {
-    count--;
-  } else {
-    count = 0;
-    flash = setInterval(flashText, 500);
-    stopFlash();
+ const btn = e.target.id;
+    if (btn === 'increment') {
+      count++;
+    } else if (btn === 'decrement') {
+      count--;
+    } else if (btn === 'reset') {
+      count = 0;
+      flash = setInterval(blinkText, 1000);
     }
-  display.textContent = count;
-
-  if (count != 0) {
-    reset.disabled = false;
-  } else {
-    reset.disabled = true;
+    display.textContent = count;
+    if (count!= 0) {
+      audio.play();
+      resetBtn.disabled = false;
+    } else {
+      resetBtn.disabled = true;
+      audio.pause();
+    }
   }
- 
-}
 
-//Flash text function
-function flashText() {
-  display.style.visibility = (display.style.visibility == '' ? 'hidden' : '');
-  display.style.color = "red";
-  increment.disabled = true;
-  decrement.disabled = true;
-}
+  function blinkText() {
+    display.style.color = 'red';
+    display.style.opacity = 0;
+    decrementBtn.disabled = true;
+    incrementBtn.disabled = true;
+    setTimeout(() => {
+      display.style.color = '';
+      display.style.opacity = 1;
+    }, 500);
+  }
 
-//stopFlash function
-function stopFlash() {
-setTimeout(() => {
-  clearInterval(flash);
-
-  //counter style reset
-  display.style.color = "";
-
-  //increment decrement button
-  increment.disabled = false;
-  decrement.disabled = false;
-}, 10000);
-
-}
+  function stopFlash() {
+    setTimeout(() => {
+      decrementBtn.disabled = false;
+      incrementBtn.disabled = false;
+      clearInterval(flash);
+    }, 5000);
+    
+  }
 
 //Array images
 const image_array = [
@@ -96,20 +92,20 @@ let timeValue;
 
 //function change background
 function ChangeBG() {
-timeValue = setInterval(processChunk, delay);
-document.body.style.backgroundImage = "url("+image_array[0]+")";
+  timeValue = setInterval(processChunk, delay);
+  document.body.style.backgroundImage = "url("+image_array[0]+")";
 
-      //function process
-      function processChunk(){
-        if (i > 0) {
-          document.body.style.backgroundImage = "url("+image_array[j]+")";
-              i--;
-              j++;
-          } else {
-              i = image_array.length;
-              j = 0;
-           }
-      }
+  // function process
+  function processChunk() {
+    if (i > 0) {
+      document.body.style.backgroundImage = "url("+image_array[j]+")";
+      i--;
+      j++;
+    } else {
+      i = image_array.length;
+      j = 0;
+    }
+  }
 }
 
 
@@ -121,34 +117,23 @@ function stoptimer() {
 }
 
 
-
 //media query
 function Mediaquery(mq) {
- 
-  //media query condition
   if (mq.matches) {
-  
-    //call stop timer function
-  stoptimer();
-
-  //animation scale title
-  document.querySelector(`h1`).animate(
-    [
-      { transform: 'scale(1)' },
-      { transform: 'scale(1.5)' }
-    ],
-    
-    {
-      duration: 1000,
-      iterations: Infinity,
-      direction: 'alternate'
-    }
-  );
-
+    stoptimer();
+    document.querySelector(`h1`).animate(
+      [
+        { transform: 'scale(1)' },
+        { transform: 'scale(1.5)' }
+      ],
+      {
+        duration: 1000,
+        iterations: Infinity,
+        direction: 'alternate'
+      }
+    );
   } else {
-
- //Change Background function
-  ChangeBG();
+    ChangeBG();
   }
 }
 
