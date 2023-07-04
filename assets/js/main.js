@@ -98,7 +98,7 @@ function ChangeBG() {
 }
 
 
-//funzione stop timer
+//funzione stop timer images
 function stoptimer() {
   setTimeout(()=> {
     clearInterval(timeValue);
@@ -131,7 +131,7 @@ function Mediaquery(mq) {
   }
 }
 
-//variables
+//variables media query
 let mq = window.matchMedia("(max-width: 1280px)");
 let animationId;
 
