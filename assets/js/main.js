@@ -38,24 +38,26 @@ el.addEventListener('click', event => {
     decrementBtn.disabled = true;
     incrementBtn.disabled = true;
     resetBtn.disabled = true;
-    let flash = setInterval(() => {
-      color = color === 'red'? '' : 'red';
-      display.style.color = color;
-    }, 500);
-    
-    setTimeout(() => {
-      clearInterval(flash);
-      decrementBtn.disabled = false;
-      incrementBtn.disabled = false;
-      resetBtn.disabled = false;
-      display.style.color = '';
-    }, 5000);
+    flash = setInterval(changeColor, 500);
+    setTimeout(stopTimeout, 5000);
   } else {
     audio.pause();
   }
   display.textContent = count;
 });
 
+function changeColor() {
+  color = color === 'red'? '' : 'red';
+  display.style.color = color;
+}
+
+function stopTimeout() {
+  clearInterval(flash);
+  decrementBtn.disabled = false;
+  incrementBtn.disabled = false;
+  resetBtn.disabled = false;
+  display.style.color = '';
+}
 
 
 // variables counter
@@ -63,76 +65,7 @@ const audio = new Audio("assets/sounds/click.m4a");
 let count = 0;
 let display = document.getElementById('count');
 let color = 'red';
-
-//Array images
-const image_array = [
-  "assets/img/backgroundimage.jpg", 
-  "assets/img/backgroundimage2.jpg",
-  "assets/img/backgroundimage3.jpg",
-  "assets/img/backgroundimage4.jpg"
-];
-
-//variables images
-let i = image_array.length;
-let j = 0;
-let delay = 5000;
-let timeValue;
-
-//function change background
-function ChangeBG() {
- timeValue = setInterval(processChunk, delay);
-  document.body.style.backgroundImage = "url("+image_array[0]+")";
-
-  // function process
-  function processChunk() {
-    if (i > 0) {
-      document.body.style.backgroundImage = "url("+image_array[j]+")";
-      i--;
-      j++;
-    } else {
-      i = image_array.length;
-      j = 0;
-    }
-  }
-}
+let flash;
 
 
-//funzione stop timer images
-function stoptimer() {
-  setTimeout(()=> {
-    clearInterval(timeValue);
-  });
-}
-
-
-//media query
-function Mediaquery(mq) {
-  if (mq.matches) {
-    stoptimer();
-  
- let animationText = document.querySelector('h1');
-  animationId = requestAnimationFrame(() => {
-    animationText.animate(
-      [
-        { transform: 'scale(1)' },
-        { transform: 'scale(1.5)' }
-      ],
-      {
-        duration: 1000,
-        iterations: Infinity,
-        direction: 'alternate'
-      }
-    );
-  });
-} else {
-    ChangeBG();
-    cancelAnimationFrame(animationId);
-  }
-}
-
-//variables media query
-let mq = window.matchMedia("(max-width: 1280px)");
-let animationId;
-
-Mediaquery(mq); //Call the media query function
      
