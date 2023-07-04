@@ -39,9 +39,8 @@ el.addEventListener('click', event => {
     incrementBtn.disabled = true;
     resetBtn.disabled = true;
     let flash = setInterval(() => {
-      display.style.color = 'red';
-      display.style.color = '';
-      display.style.color = 'red';
+      color = color === 'red'? '' : 'red';
+      display.style.color = color;
     }, 500);
     
     setTimeout(() => {
@@ -50,7 +49,7 @@ el.addEventListener('click', event => {
       incrementBtn.disabled = false;
       resetBtn.disabled = false;
       display.style.color = '';
-    }, 2000);
+    }, 5000);
   } else {
     audio.pause();
   }
@@ -63,7 +62,7 @@ el.addEventListener('click', event => {
 const audio = new Audio("assets/sounds/click.m4a");
 let count = 0;
 let display = document.getElementById('count');
-
+let color = 'red';
 
 //Array images
 const image_array = [

@@ -159,7 +159,7 @@ audio {
    }
 
    audio {
-    width: 60%;
+    width: 80%;
    }
 
    .footer_text {
@@ -186,7 +186,7 @@ audio {
        }
     
        audio {
-        width: 60%;
+        width: 80%;
        }
 }
 
@@ -207,7 +207,7 @@ audio {
        }
 
        audio {
-        width: 60%;
+        width: 80%;
        }
     .footer_text {
         font-size: 15px;
