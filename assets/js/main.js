@@ -4,7 +4,7 @@ const decrementBtn = document.createElement('button');
 const resetBtn = document.createElement('button');
 const incrementBtn = document.createElement('button');
 const container = document.getElementById('container-page');
-const buttons = document.querySelectorAll('button');
+
 
 //set id elements
 el.setAttribute('id','buttons');
