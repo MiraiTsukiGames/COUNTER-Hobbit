@@ -21,155 +21,156 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align:center;
+    text-align: center;
     height: 400px;
     width: 400px;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
+  }
 
-h1 {
+  h1 {
     font-size: 80px;
     margin-bottom: 10px;
-}
-
-h2 {
+  }
+  
+  h2 {
     font-size: 30px;
     margin-bottom: 20px;
-}
-
-#count {
+  }
+  
+  #count {
     font-size: 65px;
     margin-top: -25px;
-}
-#buttons {
+  }
+  
+  #buttons {
     display: flex;
     flex-direction: row;
     width: 100%;
     align-items: center;
     justify-content: space-around;
-}
-
-button {
+  }
+  
+  button {
     padding: 14px 20px;
     font-size: 30px;
     border: none;
     color: white;
     border-radius: 10px;
-}
-
-button:hover {
+  }
+  
+  button:hover {
     box-shadow: 0 0 50px #fd9b09;
     color: #fd9b09;
-}
+  }
 
-#decrement {
+  #decrement {
     background-image: url('../img/anello+.png');
     background-size: cover;
     background-position: center;
-}
-
-#increment {
+  }
+  
+  #increment {
     background-image: url('../img/anello-.png');
     background-size: cover;
     background-position: center;
-}
-
-#reset {
+  }
+  
+  #reset {
     background-image: url('../img/gandalf.png');
     background-size: cover;
     background-position: center;
-}
-
-#reset[disabled]:hover, 
-#increment[disabled]:hover,
-#decrement[disabled]:hover {
+  }
+  
+  #reset[disabled]:hover, 
+  #increment[disabled]:hover,
+  #decrement[disabled]:hover {
     box-shadow: none;
     color: white;
-}
-
-#reset[disabled], 
-#increment[disabled],
-#decrement[disabled] {
+  }
+  
+  #reset[disabled], 
+  #increment[disabled],
+  #decrement[disabled] {
     opacity: 50%;
     cursor: not-allowed;
     pointer-events: none;
-}
-
-audio {
+  }
+  
+  audio {
     position: absolute;
     bottom: 0;
     width: 300px; 
     height: 25px;
     width: 80%;
-}
+  }
 
 
-@font-face {
+  @font-face {
     font-family: "Hobbit Font";
     src: url(../font-family/ringbearer.medium.ttf) format("truetype");
-}
-
-.footer_text {
+  }
+  
+  .footer_text {
     font-size: 30px;
     color: #FFFF;
     position: absolute;
     bottom: 0;
     left: 20px;
-}
-
-@supports (-webkit-background-clip: text) {
-    .textGradient {
-        background-image: linear-gradient(60deg, #ffc74e, #b96d01);
-        -webkit-background-clip: text;
-        color: transparent;
-        background-clip: clip;
+  }
+  
+  @supports (-webkit-background-clip: text) {
+   .textGradient {
+      background-image: linear-gradient(60deg, #ffc74e, #b96d01);
+      -webkit-background-clip: text;
+      color: transparent;
+      background-clip: clip;
     }
-}
+  }
 
 /*Mobile*/
 @media all and (max-width: 480px) and (orientation: portrait) {
-
     body {
-        width: 100%;
-        height: 100vh;
-        cursor: url('../img/staff.png'), auto;
-        overflow-y: hidden;
-        overflow-x: hidden;
-        background-image: url('../img/imageMobile.jpg');
+      width: 100%;
+      height: 100vh;
+      cursor: url('../img/staff.png'), auto;
+      overflow-y: hidden;
+      overflow-x: hidden;
+      background-image: url('../img/imageMobile.jpg');
     }
-
+  
     h1 {
-        font-size: 50px;
+      font-size: 50px;
     }
-
+  
     h2 {
-        font-size: 25px;
+      font-size: 25px;
     }
+  
    .container {
-    text-align: center;
-   }
-
-   #buttons {
-    width: 80%;
-    margin-top: 50px;
-   }
-
-   audio {
-    width: 80%;
-   }
-
-   .footer_text {
-    font-size: 10px;
-    position: absolute;
-    bottom: 0;
-    left: 30%;
+      text-align: center;
     }
-}
+  
+    #buttons {
+      width: 80%;
+      margin-top: 50px;
+    }
+  
+    audio {
+      width: 80%;
+    }
+  
+   .footer_text {
+      font-size: 10px;
+      position: absolute;
+      bottom: 0;
+      left: 30%;
+    }
+  }
 
-@media all and (max-width: 480px) and (orientation: landscape) {
+  @media all and (max-width: 480px) and (orientation: landscape) {
     body {
         width: 100%;
         height: 100vh;
