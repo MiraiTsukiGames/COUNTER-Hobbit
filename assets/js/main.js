@@ -1,4 +1,4 @@
-//variables
+// variables
 const el = document.createElement('div');
 const decrementBtn = document.createElement('button');
 const resetBtn = document.createElement('button');
@@ -6,24 +6,24 @@ const incrementBtn = document.createElement('button');
 const container = document.getElementById('container-page');
 
 
-//set id elements
+// set id elements
 el.setAttribute('id','buttons');
 decrementBtn.setAttribute('id','decrement');
 resetBtn.setAttribute('id', 'reset');
 incrementBtn.setAttribute('id', 'increment');
 
-//append child elements
+// append child elements
 container.appendChild(el);
 el.appendChild(decrementBtn);
 el.appendChild(resetBtn);
 el.appendChild(incrementBtn);
 
-//button inner text
+// button inner text
 incrementBtn.innerText = '+';
 resetBtn.innerText = '0';
 decrementBtn.innerText = '-';
 
-//event delegation
+// event delegation
 el.addEventListener('click', event => {
   const btn = event.target.id;
   if (btn === 'increment' &&!incrementBtn.disabled) {
