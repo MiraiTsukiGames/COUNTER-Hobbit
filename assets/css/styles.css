@@ -33,7 +33,6 @@ body {
 h1 {
     font-size: 80px;
     margin-bottom: 10px;
-    
 }
 
 h2 {
@@ -265,5 +264,4 @@ audio {
         cursor: url(../img/staff.png), auto;
         background-image: url('../img/backgroundimage.jpg');
     } 
-
 }
