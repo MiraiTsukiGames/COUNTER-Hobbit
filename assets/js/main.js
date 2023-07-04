@@ -4,6 +4,7 @@ const decrementBtn = document.createElement('button');
 const resetBtn = document.createElement('button');
 const incrementBtn = document.createElement('button');
 const container = document.getElementById('container-page');
+const buttons = document.querySelectorAll('button');
 
 //set id elements
 el.setAttribute('id','buttons');
@@ -22,59 +23,47 @@ incrementBtn.innerText = '+';
 resetBtn.innerText = '0';
 decrementBtn.innerText = '-';
 
-//event listener
-document.addEventListener('click', counter);
+//event delegation
+el.addEventListener('click', event => {
+  const btn = event.target.id;
+  if (btn === 'increment' &&!incrementBtn.disabled) {
+    audio.play();
+    count++;
+  } else if (btn === 'decrement' &&!decrementBtn.disabled) {
+    audio.play();
+    count--;
+  } else if (btn === 'reset' &&!resetBtn.disabled) {
+    audio.play();
+    count = 0;
+    decrementBtn.disabled = true;
+    incrementBtn.disabled = true;
+    resetBtn.disabled = true;
+    let flash = setInterval(() => {
+      display.style.color = 'red';
+      display.style.color = '';
+      display.style.color = 'red';
+    }, 500);
+    
+    setTimeout(() => {
+      clearInterval(flash);
+      decrementBtn.disabled = false;
+      incrementBtn.disabled = false;
+      resetBtn.disabled = false;
+      display.style.color = '';
+    }, 2000);
+  } else {
+    audio.pause();
+  }
+  display.textContent = count;
+});
+
+
 
 // variables counter
 const audio = new Audio("assets/sounds/click.m4a");
 let count = 0;
 let display = document.getElementById('count');
-let flash;
 
-//button reset
-resetBtn.disabled = true;
-
-//function counter
-function counter(e) {
- const btn = e.target.id;
-    if (btn === 'increment') {
-      count++;
-    } else if (btn === 'decrement') {
-      count--;
-    } else {
-      count = 0;
-      flash = setInterval(blinkText, 1000);
-      stopFlash();
-    }
-    display.textContent = count;
-    if (count!= 0) {
-      audio.play();
-      resetBtn.disabled = false;
-    } else {
-      resetBtn.disabled = true;
-      audio.pause();
-    }
-  }
-
-  function blinkText() {
-    display.style.color = 'red';
-    display.style.opacity = 0;
-    decrementBtn.disabled = true;
-    incrementBtn.disabled = true;
-    setTimeout(() => {
-      display.style.color = '';
-      display.style.opacity = 1;
-    }, 500);
-  }
-
-  function stopFlash() {
-    setTimeout(() => {
-      decrementBtn.disabled = false;
-      incrementBtn.disabled = false;
-      clearInterval(flash);
-    }, 5000);
-    
-  }
 
 //Array images
 const image_array = [
@@ -92,7 +81,7 @@ let timeValue;
 
 //function change background
 function ChangeBG() {
-  timeValue = setInterval(processChunk, delay);
+ timeValue = setInterval(processChunk, delay);
   document.body.style.backgroundImage = "url("+image_array[0]+")";
 
   // function process
