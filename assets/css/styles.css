@@ -269,6 +269,7 @@ audio {
         width: 960px;
         margin: 0 auto;
         cursor: url(../img/staff.png), auto;
+        background-image: url('../img/backgroundimage.jpg');
     } 
 
 }

@@ -110,7 +110,10 @@ function stoptimer() {
 function Mediaquery(mq) {
   if (mq.matches) {
     stoptimer();
-    document.querySelector(`h1`).animate(
+  
+ let animationText = document.querySelector('h1');
+  animationId = requestAnimationFrame(() => {
+    animationText.animate(
       [
         { transform: 'scale(1)' },
         { transform: 'scale(1.5)' }
@@ -121,13 +124,16 @@ function Mediaquery(mq) {
         direction: 'alternate'
       }
     );
-  } else {
+  });
+} else {
     ChangeBG();
+    cancelAnimationFrame(animationId);
   }
 }
 
 //variables
 let mq = window.matchMedia("(max-width: 1280px)");
+let animationId;
 
 Mediaquery(mq); //Call the media query function
      
