@@ -24,7 +24,7 @@ resetBtn.innerText = '0';
 decrementBtn.innerText = '-';
 
 // event delegation
-el.addEventListener('click', event => {
+document.addEventListener('click', function(event) {
   const btn = event.target.id;
   if (btn === 'increment' &&!incrementBtn.disabled) {
     audio.play();
@@ -43,7 +43,7 @@ el.addEventListener('click', event => {
   } else {
     audio.pause();
   }
-  display.textContent = count;
+  display.innerHTML = count;
 });
 
 function changeColor() {
